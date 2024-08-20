@@ -1,0 +1,1231 @@
+@media (max-width: 1770px) {
+  .container {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .header__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .swiper .swiper-slide:nth-child(1) {
+    background-color: var(--grey-2);
+    background-image: url("../img/birmingham-museums-header-pic-1024-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .swiper .swiper-slide:nth-child(2) {
+    background-color: var(--grey-2);
+    background-image: url("../img/birmingham-museums-header-pic-1024-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .swiper .swiper-slide:nth-child(3) {
+    background-color: var(--grey-2);
+    background-image: url("../img/birmingham-museums-header-pic-1024-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .slider-swiper {
+    width: calc(1000 / 1650 * 100%);
+  }
+
+  .choices[data-type*=select-one] {
+    width: 350px;
+  }
+
+  .is-open .choices__list--dropdown,
+  .is-open .choices__list[aria-expanded] {
+    width: 350px;
+  }
+
+  .catalog__list-inside {
+    column-count: 2;
+  }
+
+  /* .container-contacts {
+    border: none;
+  } */
+
+  .contacts-wrap {
+    display: block;
+    padding-top: 42px;
+    padding-bottom: 18px;
+  }
+
+  .contacts__place {
+    margin-bottom: 20px;
+  }
+
+  .contacts__form {
+    margin-bottom: 10px;
+  }
+
+  .contacts__form-input {
+    width: 350px;
+  }
+
+  .contacts__form-btn {
+    width: 350px;
+  }
+
+  .social {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  /* header */
+
+  .container {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: normal;
+    justify-content: space-between;
+    padding-bottom: 25px;
+  }
+
+  .header__logo {
+    margin-right: 0;
+  }
+
+  .header__logo-svg {
+    width: 188px;
+    height: 42px;
+  }
+
+  .header__burger {
+    position: relative;
+    z-index: 2;
+    display: block;
+    flex-shrink: 0;
+    width: 36px;
+    height: 35px;
+    color: var(--white);
+    transition: color .5s ease;
+  }
+
+  .header__burger:focus-visible:not(:hover):not(:active) {
+    outline: 2px solid var(--violet);
+    outline-offset: 3px;
+  }
+
+  .header__burger::before,
+  .header__burger::after {
+    content: "";
+  }
+
+  .header__burger span,
+  .header__burger::before,
+  .header__burger::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: currentColor;
+    transition: transform .2s ease;
+    transform-origin: right;
+  }
+
+  .header__burger::before {
+    transform: translateY(calc(-100% - 6px));
+  }
+
+  .header__burger span {
+    top: calc(55% - 1px);
+    width: 28px;
+    transition: opacity .5s ease, transform .2s ease;
+  }
+
+  .header__burger::after {
+    width: 23px;
+    transform: translateY(calc(100% + 10px));
+  }
+
+  .header__burger:active {
+    color: var(--violet);
+  }
+
+  .is-open.header__burger span,
+  .is-open.header__burger::before,
+  .is-open.header__burger::after {
+    transform-origin: center;
+  }
+
+  .is-open.header__burger::before {
+    top: 50%;
+    width: 37px;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .header__burger.is-open span {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  .is-open.header__burger::after {
+    top: 50%;
+    width: 37px;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  .header__nav {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+    transform: translateX(-100%);
+  }
+
+  .header__wrap {
+    display: block;
+    overflow-y: auto;
+    flex-direction: column;
+    padding: 97px 50px 50px 48px;
+  }
+
+  .header__nav-list {
+    display: inline-block;
+    max-height: 100%;
+    margin: 0;
+    margin-bottom: 178px;
+  }
+
+  .header__nav-link {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 64px;
+  }
+
+  .header__nav-item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .header__entry-link {
+    display: block;
+    width: 260px;
+    padding: 14px 92px;
+    border: 2px solid var(--violet);
+    border-radius: 100px;
+  }
+
+  @media(any-hover: hover) {
+    .header__entry-link:hover {
+      color: var(--violet);
+    }
+  }
+
+  .header__entry-link:focus-visible:not(:hover):not(:active)::after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 100px;
+  }
+
+  .header__entry-link:active {
+    border-color: var(--bright-violet);
+    border-radius: 100px;
+    color: var(--white);
+    background-color: var(--dark-violet);
+  }
+
+  .header__nav.is-open {
+    display: block;
+    transform: translateX(0);
+    animation-name: menu-open;
+    animation-duration: .3s;
+  }
+
+  .header__nav.is-closed {
+    animation-name: menu-close;
+    animation-duration: .3s;
+  }
+
+  @keyframes menu-open {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes menu-close {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes search-open {
+    from {
+      opacity: 0;
+      transform: translateY(-50%) scaleX(0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(-50%) scaleX(1);
+    }
+  }
+
+  @keyframes search-close {
+    from {
+      opacity: 1;
+      transform: translateY(-50%) scaleX(1);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(-50%) scaleX(0);
+    }
+  }
+
+  .container-bottom {
+    display: none;
+  }
+
+  .search-btn,
+  .close-btn {
+    display: block;
+    flex-shrink: 0;
+    color: var(--white);
+    outline: none;
+    transition: color .2s ease-in-out;
+  }
+
+  .search-btn:focus-visible:not(:hover):not(:active),
+  .close-btn:focus-visible:not(:hover):not(:active) {
+    color: var(--violet);
+  }
+
+  @media (any-hover: hover) {
+
+    .search-btn:hover,
+    .close-btn:hover {
+      color: var(--bright-violet);
+    }
+  }
+
+  .search-btn:active,
+  .close-btn:active {
+    color: var(--dark-violet);
+  }
+
+  @media (any-hover: hover) {
+    .search-input:hover {
+      border-color: var(--bright-violet);
+      transition: border-color .2s ease-in-out;
+    }
+  }
+
+  .search-input:focus-visible:not(:hover) {
+    border-color: var(--dark-violet);
+    transition: border-color .2s ease-in-out;
+  }
+
+  /* Hero */
+
+  .hero__content {
+    max-width: 661px;
+    padding-top: 103px;
+  }
+
+  .hero__title {
+    margin-bottom: -8px;
+  }
+
+  .hero__text {
+    margin-bottom: 130px;
+  }
+
+  /* about */
+
+  .about__text {
+    width: 100%;
+  }
+
+  /* gallery */
+
+  .filter__title {
+    margin-bottom: 19px;
+  }
+
+  .choices[data-type*=select-one] {
+    width: 280px;
+    margin-bottom: 107px;
+  }
+
+  .choices[data-type*=select-one] .choices__inner {
+    padding-bottom: 4.5px;
+  }
+
+  .choices[data-type*=select-one]::after {
+    margin-top: 6px;
+  }
+
+  .is-open .choices__list--dropdown,
+  .is-open .choices__list[aria-expanded] {
+    width: 280px;
+  }
+
+  .slider-navigation {
+    margin-bottom: 24px;
+  }
+
+  .slider-swiper {
+    width: calc(645 / 1000 * 100%);
+    margin-left: auto;
+  }
+
+  .slide::before {
+    padding-top: calc(100% - -30px);
+  }
+
+  .modal__container {
+    width: 594px;
+    height: 594px;
+  }
+
+  .modal__img {
+    min-width: 264px;
+  }
+
+  /* catalog */
+  .catalog__descr {
+    width: 100%;
+  }
+
+  .tabs {
+    width: calc(460 / 925 * 100%);
+    margin-right: 50px;
+  }
+
+  .tabs__img {
+    margin-bottom: 29px;
+  }
+
+  .catalog__list-inside {
+    width: 116%;
+    padding-bottom: 17px;
+  }
+
+  .catalog__item-artists {
+    margin-bottom: 14px;
+  }
+
+  .catalog-square {
+    width: 173px;
+    height: 114px;
+  }
+
+  .subcontent-descr {
+    width: calc(240 / 500 * 100%);
+  }
+
+  /* events */
+
+  .events {
+    padding-bottom: 40px;
+  }
+
+  .events__title {
+    margin-bottom: 16px;
+  }
+
+  .events__cards-date,
+  .events__cards-place {
+    text-align: right;
+  }
+
+  .events__cards-date {
+    margin-bottom: 6px;
+  }
+
+  .events__cards-content {
+    min-height: 483px;
+    padding: 14px 25px 50px 25px;
+  }
+
+  .events__cards-title {
+    margin-bottom: 5px;
+  }
+
+  .events__cards-wrap {
+    bottom: 55px;
+  }
+
+  .events-btn {
+    display: none;
+  }
+
+  .swiper-pagination {
+    display: block;
+  }
+
+  /* projects */
+  .projects {
+    padding-top: 64px;
+  }
+
+  .projects__descr {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .projects__swiper {
+    margin-right: 50px;
+    margin-left: 55px;
+  }
+
+  .projects__swiper-link {
+    height: 128px;
+  }
+
+  .projects__swiper-img {
+    width: 219px;
+    height: 43px;
+  }
+
+  .projects-btn {
+    top: 38%;
+  }
+
+  .projects-button-next {
+    right: -2px;
+  }
+
+  .projects-button-prev {
+    left: 4px;
+  }
+
+  /* contacts */
+
+  .contacts__place {
+    margin-bottom: 32px;
+  }
+
+  .contacts__form-input {
+    width: 270px;
+  }
+
+  .contacts__form-btn {
+    padding-right: 20px;
+  }
+
+  .contacts__form {
+    margin-bottom: 31px;
+  }
+
+  /* footer */
+  .footer__wrap {
+    padding-top: 39px;
+  }
+
+  .footer__logo {
+    padding-top: 10px;
+  }
+
+  .link-svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  /* header */
+  .form-search {
+    z-index: 10;
+    right: 0;
+    width: 100%;
+    height: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .search-input {
+    width: 100%;
+    padding-bottom: 9px;
+  }
+
+  .close-btn {
+    padding-left: 26px;
+  }
+
+  .close-btn-svg {
+    width: 29px;
+    height: 29px;
+  }
+
+  .swiper .swiper-slide:nth-child(1) {
+    background-color: var(--grey-2);
+    background-image: url("../img/birmingham-museums-header-pic-768-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .swiper .swiper-slide:nth-child(2) {
+    background-color: var(--grey-2);
+    background-image: url("../img/birmingham-museums-header-pic-768-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .swiper .swiper-slide:nth-child(3) {
+    background-color: var(--grey-2);
+    background-image: url("../img/birmingham-museums-header-pic-768-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero__title {
+    font-size: 60px;
+  }
+
+  /* gallery */
+  .gallery__wrap {
+    display: block;
+  }
+
+  .filter {
+    margin-bottom: 39px;
+  }
+
+  .choices[data-type*=select-one] {
+    margin-bottom: 42px;
+  }
+
+  .slider-swiper {
+    width: calc(695 / 700 * 100%);
+    margin-left: 0;
+  }
+
+  .slider-navigation {
+    margin-bottom: 26px;
+  }
+
+  .slide::before {
+    padding-top: calc(100% - -12px);
+  }
+
+  .modal__container {
+    height: 594px;
+  }
+
+  .modal__info {
+    padding-right: 30px;
+    padding-left: 29px;
+  }
+
+  .modal__img {
+    min-width: 310px;
+  }
+
+  /* catalog */
+  .catalog__content {
+    flex-direction: column;
+  }
+
+  .catalog__descr {
+    margin-bottom: 23px;
+  }
+
+  .catalog__list-inside {
+    width: 109%;
+    padding-bottom: 46px;
+
+    column-count: 3;
+  }
+
+  .catalog__list {
+    width: 100%;
+    margin-bottom: 53px;
+  }
+
+  .tabs {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .tabs__img {
+    width: 100%;
+    margin-bottom: 19px;
+  }
+
+  .tabs__title {
+    margin-bottom: 6px;
+  }
+
+  .tabs__date {
+    margin-bottom: 7px;
+  }
+
+  .subcontent-descr {
+    width: calc(240 / 600 * 100%);
+  }
+
+  /* events */
+
+  .events__title {
+    margin-bottom: 13px;
+  }
+
+  .events__cards-content {
+    padding-right: 16px;
+  }
+
+  .events__cards-wrap {
+    bottom: 51px;
+  }
+
+  /* projects */
+  .projects__descr {
+    margin-bottom: 28px;
+  }
+
+  .projects__partner-title {
+    margin-bottom: 30px;
+  }
+
+  .projects__swiper-link {
+    height: 105px;
+  }
+
+  /* contacts */
+  .contacts__form {
+    display: block;
+  }
+
+  .contacts-wrap {
+    padding-bottom: 21px;
+  }
+
+  .contacts__form-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts__form-input {
+    width: 323px;
+    margin-right: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+  }
+
+  .contacts__form-btn {
+    width: 317px;
+    padding-right: 26px;
+  }
+
+  .social__title {
+    margin-bottom: 5px;
+  }
+}
+
+@media(max-width: 576px) {
+  .section-title {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 38px;
+  }
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .header-container {
+    padding-top: 12px;
+    padding-bottom: 8px;
+  }
+
+  .search-btn-svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .header__logo-svg {
+    width: 97px;
+    height: 22px;
+  }
+
+  .header__burger {
+    width: 25px;
+    height: 18px;
+    margin-right: 5px;
+  }
+
+  .header__burger span {
+    width: 16px;
+  }
+
+  .header__burger::after {
+    width: 10px;
+    transform: translateY(calc(100% + 4px));
+  }
+
+  .form-search {
+    top: 85%;
+    right: 0;
+    height: 75px;
+    padding: 24px 12px 10px 58px;
+  }
+
+  .close-btn-svg,
+  .search-svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .search-input {
+    width: 180px;
+    padding-bottom: 0;
+  }
+
+  .search-btn {
+    padding-top: 3px;
+    padding-left: 1px;
+  }
+
+  .close-btn {
+    padding-bottom: 43px;
+    padding-left: 30px;
+  }
+
+  .header__wrap {
+    padding: 47px 15px 15px 15px;
+  }
+
+  .is-open.header__burger::before,
+  .is-open.header__burger::after {
+    width: 15px;
+  }
+
+  .header__nav-list {
+    margin-bottom: 50px;
+  }
+
+  .header__nav-link {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .header__entry-link {
+    width: 115px;
+    padding: 10px 30px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .header__entry-svg {
+    width: 9px;
+    height: 9px;
+  }
+
+  /* hero */
+
+  .swiper .swiper-slide:nth-child(1) {
+    background-color: var(--grey-2);
+    background-image: url("../img/birmingham-museums-header-pic-320-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .swiper .swiper-slide:nth-child(2) {
+    background-color: var(--grey-2);
+    background-image: url("../img/birmingham-museums-header-pic-320-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .swiper .swiper-slide:nth-child(3) {
+    background-color: var(--grey-2);
+    background-image: url("../img/birmingham-museums-header-pic-320-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero__content {
+    padding-top: 30px;
+    padding-right: 17px;
+    padding-bottom: 44px;
+    padding-left: 22px;
+    text-align: center;
+  }
+
+  .hero__title {
+    padding-bottom: 10px;
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  .hero__text {
+    margin-bottom: 38px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .hero__link {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 14px 18px 14px 18px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  /* about */
+
+  .about {
+    padding-top: 50px;
+    padding-bottom: 42px;
+  }
+
+  .about__title {
+    margin-bottom: 11px;
+  }
+
+  .about__text {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  /* gallery */
+  .gallery__wrap {
+    padding-top: 50px;
+    padding-bottom: 22px;
+  }
+
+  .choices {
+    padding-top: 10px;
+  }
+
+  .choices[data-type*=select-one] {
+    width: 290px;
+    margin-bottom: 28px;
+  }
+
+  .is-open .choices__list--dropdown,
+  .is-open .choices__list[aria-expanded] {
+    width: 290px;
+  }
+
+  .slider-swiper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .slide::before {
+    padding-top: calc(100% - -74px);
+  }
+
+  .checkbox-wrap {
+    margin-bottom: -9px;
+  }
+
+  .swiper-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .slider-navigation {
+    justify-content: center;
+  }
+
+  .modal__container {
+    width: 290px;
+    height: 600px;
+  }
+
+  .modal__content {
+    display: block;
+  }
+
+  .modal__info {
+    padding: 17px 20px;
+  }
+
+  .modal__title {
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  .modal__title-name {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .modal__img {
+    min-width: 290px;
+    height: 200px;
+  }
+
+  .modal__data {
+    margin-bottom: 12px;
+  }
+
+  /* catalog */
+  .catalog {
+    padding-top: 50px;
+  }
+
+  .catalog__title {
+    margin-bottom: 14px;
+  }
+
+  .catalog__descr {
+    display: none;
+  }
+
+  .catalog__list-inside {
+    padding-top: 26px;
+    padding-bottom: 6px;
+
+    column-count: 1;
+  }
+
+  .catalog__item-btn {
+    padding-top: 21px;
+    padding-bottom: 19px;
+    font-size: 18px;
+  }
+
+  .catalog__svg {
+    top: 22px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .catalog-square {
+    width: 79px;
+    height: 118px;
+  }
+
+  .catalog__item-subtitle {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .subcontent-descr {
+    width: calc(280 / 400 * 100%);
+  }
+
+  .tabs__title {
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  .tabs__img {
+    margin-bottom: 16px;
+  }
+
+  .tabs__date {
+    margin-bottom: 13px;
+  }
+
+  /* .tabs__descr {
+    line-height: 22px;
+  } */
+
+  /* events  */
+  .events {
+    padding-top: 8px;
+  }
+
+  .events__cards-wrapper {
+    padding-right: 0;
+  }
+
+  .events__cards-content {
+    padding-left: 22px;
+  }
+
+  .events__cards-date {
+    margin-bottom: 12px;
+  }
+
+  .events__cards-wrap {
+    bottom: 56px;
+    left: 28px;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: -10px;
+    left: -1px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* projects  */
+  .projects {
+    padding-top: 4px;
+    padding-bottom: 20px;
+  }
+
+  .projects__title {
+    margin-bottom: 11px;
+  }
+
+  .projects__descr {
+    margin-bottom: 84px;
+  }
+
+  .projects__swiper {
+    margin-right: 49px;
+    margin-left: 47px;
+  }
+
+  .projects__partner-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .projects__swiper-link {
+    height: 65px;
+  }
+
+  .projects__swiper-img {
+    width: 112px;
+    height: auto;
+  }
+
+  .projects__swiper-img-other {
+    width: 70px;
+    height: 40px;
+  }
+
+  .projects-btn {
+    top: 19%;
+  }
+
+  .projects-button-next {
+    right: 1px;
+  }
+
+  .projects-button-prev {
+    left: 1px;
+  }
+
+  /* contacts */
+  .container-contacts {
+    border: none;
+  }
+
+  .contacts__place-title {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .contacts-wrap {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+
+  .contacts__form-wrap {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .contacts__form-input {
+    width: 290px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 1px;
+  }
+
+  .contacts__form-descr {
+    display: none;
+  }
+
+  .contacts__form-descr-mobile {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .contacts__place {
+    margin-bottom: 20px;
+  }
+
+  .contacts__form-btn {
+    width: 128px;
+    min-height: 40px;
+  }
+
+  .social__title {
+    margin-bottom: 6px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .contacts__form {
+    margin-bottom: 22px;
+  }
+
+  .social-svg {
+    display: none;
+  }
+
+  .social__list-link {
+    width: 100%;
+    height: 100%;
+  }
+
+  .social-svg-mobile {
+    display: block;
+  }
+
+  .map {
+    height: 320px;
+  }
+
+  /* footer */
+  .footer__logo {
+    width: 97px;
+  }
+
+  .footer__wrap {
+    align-items: center;
+    flex-direction: column-reverse;
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+
+  .link-svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer__list {
+    margin-bottom: 6px;
+  }
+}
